@@ -15,4 +15,3 @@ initSqliteDatabase().then(() => {
     console.log(`🚀 LeadDesk AI CRM Backend running on http://localhost:${PORT}`);
   });
 });
-
