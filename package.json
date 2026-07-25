@@ -1,12 +1,17 @@
 {
-  "name": "leaddesk-ai-crm-backend",
+  "name": "leaddesk-ai-crm",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
-  "main": "server.js",
+  "description": "Enterprise AI Lead Management System",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
-    "test": "node --test tests/*.test.js"
+    "start": "node backend/server.js",
+    "build": "npm --prefix backend install && npm --prefix frontend install && npm --prefix frontend run build",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend run start",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
